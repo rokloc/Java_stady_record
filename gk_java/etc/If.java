@@ -3,7 +3,8 @@ public class If {
 		int x;
 
 		x = 100;
-
+		if (x > 0)
+			x == 50;
 			
 
 	
