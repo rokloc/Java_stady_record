@@ -5,10 +5,13 @@ public class Array {
 		int	avarage;
 		int	i;
 
+		i = 0;
 		avarage = 0;
 		sum = 0;
-		for(i = 0; i < 5; i++) {
-			sum += Num_Array[i];
+		//for(i = 0; i < 5; i++) {
+		for(int value : Num_Array) {
+			sum += value;
+			i++;
 		}
 		avarage = sum / i;
 		System.out.println("平均点は" + avarage + "点です。");
