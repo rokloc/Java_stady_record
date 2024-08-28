@@ -1,33 +1,15 @@
-
 public class Main {
-    public static void main(String[] args) {
-/*
-        System.out.println("Hello, World!");
-	int	x;
-	int	y;
-	x = -100;
-	y = Math.max(1, x);
-	System.out.println(y);	
-	
-	//Ramdom
-	int z;
+	public static void main(String[] args){
+		//勇者生成
+		Hero h1 = new Hero();
+		//フィールド初期化
+		h1.name = "ミナト";
+		h1.hp = 100;
+		System.out.println("勇者" + h1.name + "を生み出しました");
 
-	z = new java.util.Random().nextInt(100);	
-	System.out.println(z);	
-
-
-	//入力
-	String str;
-
-	str = new java.util.Scanner(System.in).nextLine();
-	System.out.println(str);	
-*/
-	System.out.println("あなたの名前を入力して下さい");
-	String x = new java.util.Scanner(System.in).nextLine();
-	System.out.println("あなたの年齢を入力して下さい");	
-	String y = new java.util.Scanner(System.in).nextLine();
-
-	System.out.println(y + "歳の" + x + "さんいらっしゃいこんにちわ");	
-    }
-}
-
+		h1.sit(5);
+		h1.slip();
+		h1.sit(25);
+		h1.run();
+	}
+ }
