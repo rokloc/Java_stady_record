@@ -1,13 +1,11 @@
-//抽象クラス
-public abstract class TangibleAsset {
+
+public abstract class Asset {
 	String name;
 	int price;
-	String color;
 	//コンストラクタ
-	public TangibleAsset(String name, int price, String color, String isbn) {
+	public Asset(String name, int price) {
 		this.name = name;
 		this.price = price;
-		this.color = color;
 	}
 
 	//メソッド
@@ -15,12 +13,32 @@ public abstract class TangibleAsset {
 		return (this.name);
 	public int getPrice()
 		return (this.price);
+}
+
+
+
+/*
+public abstract class IntangibleAsset {
+
+}
+*/
+
+//抽象クラス
+public abstract class TangibleAsset extends Asset{
+	String color;
+	//コンストラクタ
+	public TangibleAsset(String name, int price, String color) {
+		super(name, price);
+		this.color = color;
+	}
+
+	//メソッド
 	public String getColor()
 		return (this.color);	
 }
 
 //抽象クラスの子インストラクタ
-public class Book {
+public class Book extends TangibleAsset{
 	String isbn;
 	//コンストラクタ
 	public Book(String name, int price, String color, String isbn) {
@@ -33,7 +51,7 @@ public class Book {
 
 }
 //抽象クラスの子インストラクタ
-public class Computer {
+public class Computer extends TangibleAsset{
 	String makerName;
 	//コンストラクタ
 	public Computer(String name, int price, String color, String makerName) {
