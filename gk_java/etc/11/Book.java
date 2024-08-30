@@ -1,4 +1,12 @@
 
+public interface Thing{
+	//メソッド
+	public double getWeight();
+	public void setWeight(double weight);
+}
+
+
+
 public abstract class Asset {
 	String name;
 	int price;
@@ -14,9 +22,6 @@ public abstract class Asset {
 	public int getPrice()
 		return (this.price);
 }
-
-
-
 /*
 public abstract class IntangibleAsset {
 
@@ -24,17 +29,23 @@ public abstract class IntangibleAsset {
 */
 
 //抽象クラス
-public abstract class TangibleAsset extends Asset{
+public abstract class TangibleAsset extends Asset implements Thing {
 	String color;
+	double weight;
 	//コンストラクタ
-	public TangibleAsset(String name, int price, String color) {
+	public TangibleAsset(String name, int price, String color, double weihgt) {
 		super(name, price);
 		this.color = color;
+		this.weihgt = weight;
 	}
 
 	//メソッド
 	public String getColor()
-		return (this.color);	
+		return (this.color);
+	public double getWeight()
+		return (this.weihgt);
+	public void setWeight(double weight)
+		this.weight = weight;
 }
 
 //抽象クラスの子インストラクタ
