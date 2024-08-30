@@ -1,3 +1,4 @@
+//抽象クラス
 public abstract class TangibleAsset {
 	String name;
 	int price;
@@ -18,7 +19,7 @@ public abstract class TangibleAsset {
 		return (this.color);	
 }
 
-
+//抽象クラスの子インストラクタ
 public class Book {
 	String isbn;
 	//コンストラクタ
@@ -31,7 +32,7 @@ public class Book {
 		return (this.isbn);
 
 }
-
+//抽象クラスの子インストラクタ
 public class Computer {
 	String makerName;
 	//コンストラクタ
