@@ -16,6 +16,7 @@ public class SampleBootApp1Application implements ApplicationRunner {
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(SampleBootApp1Application.class);
 		app.setBannerMode(Mode.OFF);
+		//デフォルトはTrue.falseにすると実行時にUIウィンドウが出てくる。
 		app.setHeadless(false);
 		app.run(args);
 	}
