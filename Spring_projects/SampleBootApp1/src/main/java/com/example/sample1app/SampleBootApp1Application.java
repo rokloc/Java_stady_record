@@ -1,6 +1,7 @@
 package com.example.sample1app;
 
-import java.util.Arrays;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -13,14 +14,20 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SampleBootApp1Application implements ApplicationRunner {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(SampleBootApp1Application.class, args);
 		SpringApplication app = new SpringApplication(SampleBootApp1Application.class);
 		app.setBannerMode(Mode.OFF);
+		app.setHeadless(false);
 		app.run(args);
 	}
 	
 	@Override
 	public void run(ApplicationArguments args) {
+		JFrame frame = new JFrame("Spring Boot Swing App");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(300,200);
+		frame.add(new JLabel("Spring Boot Application."));
+		frame.setVisible(true);
+		/*
 		System.out.println("+--------------------------------------------+");
 		System.out.println("|   this is Application Runner program.    |");
 		System.out.println("+--------------------------------------------+");
@@ -28,6 +35,6 @@ public class SampleBootApp1Application implements ApplicationRunner {
 		System.out.println(args.getNonOptionArgs());
 		System.out.println(Arrays.asList(args.getSourceArgs()));
 
-		
+		*/
 	}
 }
