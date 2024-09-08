@@ -1,0 +1,84 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('images/back_image.jpg'); /* 背景画像を指定 */
+    background-size: cover;
+}
+
+.head {
+    z-index: 1;
+    background-color: #f1f1f1;   /* リンクの背景色 */
+    padding-bottom: 0px;
+}
+
+.main-container {
+    display: flex;               /* 横並びのコンテナを作成 */
+
+}
+
+.container {
+    flex: 1;                     /* 各コンテナが50%の幅を持つ */
+    display: flex;               /* Flexboxを使用 */
+    flex-direction: column;      /* 縦に並べる */
+    justify-content: center;     /* 縦方向に中央揃え */
+    align-items: center;         /* 横方向に中央揃え */
+    gap: 50px;                   /* リンク間のスペース */
+    padding: 20px;
+
+}
+
+.links {
+    display: flex;               /* リンクを縦に並べる */
+    flex-direction: column;      /* 縦に並べる */
+    align-items: center;         /* 横方向に中央揃え */
+    gap: 10px;                   /* リンク間のスペース */
+
+}
+
+.link {
+    text-decoration: none;       /* リンクの下線を削除 */
+    color: #007bff;              /* リンクの色 */
+    padding: 10px;               /* 内側のスペース */
+    border: 1px solid #007bff;   /* リンクにボーダーを追加 */
+    border-radius: 30px;          /* ボーダーの角を丸くする */
+    background-color: #f1f1f1;   /* リンクの背景色 */
+    text-align: center;          /* テキストを中央揃え */
+    display: block;              /* リンクをブロック要素として表示 */
+    font-size: 50px;
+}
+
+.link:hover {
+    background-color: #e9ecef;   /* ホバー時に背景色を変更 */
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 90px;
+    margin-bottom: -30px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 1px;
+}
+
+.links-container {
+    display: flex;            /* Flexboxを使用 */
+    flex-direction: column;   /* 縦に並べる */
+    gap: 10px;                /*リンクの間に10pxのスペース */
+    padding: 20px;
+    font-size: 35px;
+} 
+
+
+
+
+
+
+
+
