@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Simple Form</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Simple home Page</h1>
+ 	<form method="post" action="/submit">
+  		<p th:text="${msg}"></p>
+  		<input type="text" name="text1" />
+ 		
+ 		
+ 		
+ 		<!-- チェックボックス -->
+ 		<div>
+	 		<p th:text="${check}"></p>
+	 		<input type="checkbox" name="check1" value="Movie" id="Movie"/>
+	 		<label for="Movie">Movie</label>
+	 		<br>
+	 		<input type="checkbox" name="check1" value="Sport" id="Sport"/>
+	 		<label for="Sport">Sport</label>
+ 		</div>
+ 		<!-- ラジオボタン -->
+		<!-- <input type="radio"> -->
+		
+		<br>
+		<input type="submit" />
+		
+ 	</form>
+</body>
+</html>
+
+
+
+

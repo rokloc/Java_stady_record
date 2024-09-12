@@ -17,13 +17,14 @@ repositories {
 	mavenCentral()
 }
 
+//使用する標準クラスをインポート前に記述。
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation 'jakarta.servlet:jakarta.servlet-api:5.0.0'//jakarta
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'//Controller
-	implementation 'org-springframework.boot:spring-boot-starter-thymeleaf'//Thymeleaf
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'//Controller/Thymeleaf
+
 }
  
 

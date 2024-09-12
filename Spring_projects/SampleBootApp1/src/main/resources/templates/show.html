@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Simple Form</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Simple show Page</h1>
+ 	
+  	<p th:text="${msg}"></p>
+	<p th:text="${value}">さん元気ですか</p>
+	
+	
+	
+	<!-- interests が空でない場合のみ表示 -->
+    <p th:if="${#lists.isEmpty(check1)}">仕事が趣味という人なんですね</p>
+    
+    <!-- interests が空でない場合のみ表示 -->
+    <p th:if="${!#lists.isEmpty(check1)}"
+       th:text="'あなたは ' + ${check1} + ' が好きなんですね!'"></p>
+    
+	<a href="/">ホーム画面に戻る</a>
+</body>
+</html>

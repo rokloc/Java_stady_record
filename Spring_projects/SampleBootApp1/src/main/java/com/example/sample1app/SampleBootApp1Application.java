@@ -6,11 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.stereotype.Controller;
 
-
+//ソースコードが実行された時のエントリーポイント
 @SpringBootApplication
 public class SampleBootApp1Application {
 
 	public static void main(String[] args) {
+		//アプリが開始される
 		SpringApplication.run(SampleBootApp1Application.class, args);
 	}
 }
