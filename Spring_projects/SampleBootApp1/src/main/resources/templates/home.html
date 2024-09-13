@@ -7,8 +7,9 @@
 <body>
 	<h1>Simple home Page</h1>
  	<form method="post" action="/submit">
+ 		<!-- テキストボックス -->
   		<p th:text="${msg}"></p>
-  		<input type="text" name="text1" />
+  		<input type="text" name="text1"/>
  		
  		
  		
@@ -22,10 +23,21 @@
 	 		<label for="Sport">Sport</label>
  		</div>
  		<!-- ラジオボタン -->
-		<!-- <input type="radio"> -->
+ 		<div>
+			<p th:text="${radioMsg}"></p>
+		    <input type="radio" name="radio" value="都内" id="Option1"/>
+		    <label for="Option1">都内</label>
+		    <br>
+		    <input type="radio" name="radio" value="都外" id="Option2"/>
+		    <label for="Option2">都外</label>
+		    <br>
+		</div>
+		<input type="submit" />
 		
 		<br>
-		<input type="submit" />
+		<br>
+		
+		<p th:if="${error_handling == 'error'}">入力にエラーがありました。正しく入力し直して下さい。</p>
 		
  	</form>
 </body>

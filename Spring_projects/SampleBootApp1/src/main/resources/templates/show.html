@@ -19,6 +19,10 @@
     <p th:if="${!#lists.isEmpty(check1)}"
        th:text="'あなたは ' + ${check1} + ' が好きなんですね!'"></p>
     
+    <p th:text="${radio} + 'を拠点とされているんですね。'"></p> 
+    
 	<a href="/">ホーム画面に戻る</a>
 </body>
 </html>
+
+<!-- エラー処理省略 -->

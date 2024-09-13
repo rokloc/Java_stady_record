@@ -29,17 +29,25 @@ public class HelloController {
 	public String ShowHome(Model model) {
 	  model.addAttribute("msg","名前を書いて下さい。");
 	  model.addAttribute("check","好きなもの全てにチェック入れて下さい");
+	  model.addAttribute("radioMsg","居住地を選択して下さい");
 	  return "home";
 	}
 	
 	//（/）へのPOSTリクエストはここで受ける。HTML指定
 	@PostMapping("/submit")
-	public String form(@RequestParam("text1") String str, @RequestParam("check1") List<String> check1,			
+	public String form(@RequestParam("text1") String text1, @RequestParam("check1") List<String> check1, @RequestParam("radio") String radio,	
 			Model model) {
-	  model.addAttribute("msg","こんにちは、" + str + "さん！");
-	  model.addAttribute("value", str + "さん今日もがんばってください");
-	  model.addAttribute("check1", check1);
-	  return "show";
+		model.addAttribute("error_handling", "correct");
+		if (text1 == null || text1.trim().isEmpty() == true) {
+			model.addAttribute("error_handling", "error");
+			return "home";
+		}
+		
+		model.addAttribute("msg","こんにちは、" + text1 + "さん！");
+		model.addAttribute("value", text1 + "さん今日もがんばってください");
+		model.addAttribute("check1", check1);
+		model.addAttribute("radio", radio);
+		return "show";
 	}
 }
 
