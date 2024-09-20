@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ToDo List</title>
+</head>
+<body>
+    <h1>ToDoリスト</h1>
+    
+    <!-- 新しいToDoを追加するフォーム -->
+    <form action="/todos" method="post">
+        <input type="text" name="content" placeholder="新しいToDoを入力">
+        <button type="submit">追加</button>
+    </form>
+
+    <ul>
+        <!-- 既存のToDoリストを表示 -->
+        <li th:each="todo : ${todos}">
+            <span th:text="${todo.content}">ToDo内容</span>
+            <form action="/todos/delete" method="post" style="display:inline;">
+                <input type="hidden" name="id" th:value="${todo.id}">
+                <button type="submit">削除</button>
+            </form>
+            <form action="/todos/update" method="post" style="display:inline;">
+                <input type="text" name="content" placeholder="編集内容">
+                <input type="hidden" name="id" th:value="${todo.id}">
+                <button type="submit">編集</button>
+            </form>
+        </li>
+    </ul>
+</body>
+</html>
